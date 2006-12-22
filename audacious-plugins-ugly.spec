@@ -3,7 +3,7 @@ Summary:	Ugly plugins for Audacious media player (metapackage)
 Summary(pl):	Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious (metapakiet)
 Name:		audacious-plugins-ugly
 Version:	1.2.0
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://audacious-media-player.org/release/%{name}-%{version}.tgz
