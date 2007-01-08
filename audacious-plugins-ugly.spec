@@ -27,11 +27,12 @@ Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious
 (metapakiet).
 
 %package -n audacious-general-notify
-Summary:        Audacious media player - notify plugin
-Summary(pl):    Wtyczka notify odtwarzacza multimedialnego Audacious
-Group:          X11/Applications/Sound
-Epoch:          1
-Requires:       audacious = %{audver}
+Summary:	Audacious media player - notify plugin
+Summary(pl):	Wtyczka notify odtwarzacza multimedialnego Audacious
+Group:		X11/Applications/Sound
+# WTF?
+Epoch:		1
+Requires:	audacious = %{audver}
 
 %description -n audacious-general-notify
 notify plugin for Audacious media player.
