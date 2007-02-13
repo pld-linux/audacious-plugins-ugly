@@ -1,6 +1,6 @@
 %define	audver	1.2.2
 Summary:	Ugly plugins for Audacious media player (metapackage)
-Summary(pl.UTF-8):   Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious (metapakiet)
+Summary(pl.UTF-8):	Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious (metapakiet)
 Name:		audacious-plugins-ugly
 Version:	1.2.0
 Release:	1
@@ -28,7 +28,7 @@ Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious
 
 %package -n audacious-general-notify
 Summary:	Audacious media player - notify plugin
-Summary(pl.UTF-8):   Wtyczka notify odtwarzacza multimedialnego Audacious
+Summary(pl.UTF-8):	Wtyczka notify odtwarzacza multimedialnego Audacious
 Group:		X11/Applications/Sound
 # WTF?
 Epoch:		1
@@ -42,7 +42,7 @@ Wtyczka notify dla odtwarzacza multimedialnego Audacious.
 
 %package -n audacious-input-mplayer
 Summary:	Audacious media player - mplayer input plugin
-Summary(pl.UTF-8):   Wtyczka wejściowa mplayer odtwarzacza multimedialnego Audacious
+Summary(pl.UTF-8):	Wtyczka wejściowa mplayer odtwarzacza multimedialnego Audacious
 Group:		X11/Applications/Sound
 Requires:	audacious = %{audver}
 
@@ -54,7 +54,7 @@ Wtyczka wejściowa mplayer dla odtwarzacza multimedialnego Audacious.
 
 %package -n audacious-input-sap
 Summary:	Audacious media player - sap input plugin
-Summary(pl.UTF-8):   Wtyczka wejściowa sap odtwarzacza multimedialnego Audacious
+Summary(pl.UTF-8):	Wtyczka wejściowa sap odtwarzacza multimedialnego Audacious
 Group:		X11/Applications/Sound
 Requires:	audacious = %{audver}
 
@@ -66,7 +66,7 @@ Wtyczka wejściowa sap dla odtwarzacza multimedialnego Audacious.
 
 %package -n audacious-visualization-iris
 Summary:	Audacious media player - IRIS visualization plugin
-Summary(pl.UTF-8):   Wtyczka graficzna IRIS odtwarzacza multimedialnego Audacious
+Summary(pl.UTF-8):	Wtyczka graficzna IRIS odtwarzacza multimedialnego Audacious
 Group:		X11/Applications/Sound
 Requires:	audacious = %{audver}
 
