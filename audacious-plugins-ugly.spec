@@ -6,7 +6,7 @@ Version:	1.3.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://audacious-media-player.org/release/%{name}-%{version}.tgz
+Source0:	http://static.audacious-media-player.org/release/%{name}-%{version}.tgz
 # Source0-md5:	3c6274c334c60e092135202a37c61dc2
 URL:		http://audacious-media-player.org/
 BuildRequires:	audacious-devel >= %{audver}
