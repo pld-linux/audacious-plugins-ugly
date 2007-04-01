@@ -1,18 +1,21 @@
-%define	audver	1.2.2
+%define	audver	1.3.1
 Summary:	Ugly plugins for Audacious media player (metapackage)
 Summary(pl.UTF-8):	Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious (metapakiet)
 Name:		audacious-plugins-ugly
-Version:	1.2.0
+Version:	1.3.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://audacious-media-player.org/release/%{name}-%{version}.tgz
-# Source0-md5:	4219302976744ec180136b0697daaf4d
+# Source0-md5:	3c6274c334c60e092135202a37c61dc2
 URL:		http://audacious-media-player.org/
 BuildRequires:	audacious-devel >= %{audver}
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	gtk+2-devel >= 2:2.6.0
+BuildRequires:	libglade2-devel >= 1:2.3.1
 BuildRequires:	libnotify-devel >= 0.4.2
 BuildRequires:	taglib-devel >= 1.4
-BuildRequires:	xorg-lib-libXxf86vm-devel
+BuildRequires:	xorg-lib-libXxf86vm-devel >= 1.0.0
 Requires:	audacious-general-notify = 1:%{version}-%{release}
 Requires:	audacious-input-mplayer = %{version}-%{release}
 Requires:	audacious-input-sap = %{version}-%{release}
@@ -29,9 +32,8 @@ Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious
 %package -n audacious-general-notify
 Summary:	Audacious media player - notify plugin
 Summary(pl.UTF-8):	Wtyczka notify odtwarzacza multimedialnego Audacious
-Group:		X11/Applications/Sound
-# WTF?
 Epoch:		1
+Group:		X11/Applications/Sound
 Requires:	audacious = %{audver}
 
 %description -n audacious-general-notify
@@ -39,6 +41,18 @@ notify plugin for Audacious media player.
 
 %description -n audacious-general-notify -l pl.UTF-8
 Wtyczka notify dla odtwarzacza multimedialnego Audacious.
+
+%package -n audacious-input-cube
+Summary:	Audacious media player - cube input plugin
+Summary(pl.UTF-8):	Wtyczka wejściowa cube odtwarzacza multimedialnego Audacious
+Group:		X11/Applications/Sound
+Requires:	audacious = %{audver}
+
+%description -n audacious-input-cube
+cube input plugin for Audacious media player.
+
+%description -n audacious-input-cube -l pl.UTF-8
+Wtyczka wejściowa cube dla odtwarzacza multimedialnego Audacious.
 
 %package -n audacious-input-mplayer
 Summary:	Audacious media player - mplayer input plugin
@@ -51,18 +65,6 @@ mplayer input plugin for Audacious media player.
 
 %description -n audacious-input-mplayer -l pl.UTF-8
 Wtyczka wejściowa mplayer dla odtwarzacza multimedialnego Audacious.
-
-%package -n audacious-input-sap
-Summary:	Audacious media player - sap input plugin
-Summary(pl.UTF-8):	Wtyczka wejściowa sap odtwarzacza multimedialnego Audacious
-Group:		X11/Applications/Sound
-Requires:	audacious = %{audver}
-
-%description -n audacious-input-sap
-sap input plugin for Audacious media player.
-
-%description -n audacious-input-sap -l pl.UTF-8
-Wtyczka wejściowa sap dla odtwarzacza multimedialnego Audacious.
 
 %package -n audacious-visualization-iris
 Summary:	Audacious media player - IRIS visualization plugin
@@ -80,9 +82,9 @@ Wtyczka graficzna IRIS dla odtwarzacza multimedialnego Audacious.
 %setup -q
 
 %build
+%{__autoconf}
 %configure \
-	--enable-mplayer \
-	--enable-sap
+	--enable-mplayer
 
 %{__make}
 
@@ -102,13 +104,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/audacious/General/libnotify.so
 
+%files -n audacious-input-cube
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/audacious/Input/libcube.so
+
 %files -n audacious-input-mplayer
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/audacious/Input/libmplayer.so
-
-%files -n audacious-input-sap
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/audacious/Input/libsapplug.so
 
 %files -n audacious-visualization-iris
 %defattr(644,root,root,755)
