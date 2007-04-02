@@ -3,7 +3,7 @@ Summary:	Ugly plugins for Audacious media player (metapackage)
 Summary(pl.UTF-8):	Niedopracowane wtyczki dla odtwarzacza multimedialnego Audacious (metapakiet)
 Name:		audacious-plugins-ugly
 Version:	1.3.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://static.audacious-media-player.org/release/%{name}-%{version}.tgz
@@ -17,8 +17,8 @@ BuildRequires:	libnotify-devel >= 0.4.2
 BuildRequires:	taglib-devel >= 1.4
 BuildRequires:	xorg-lib-libXxf86vm-devel >= 1.0.0
 Requires:	audacious-general-notify = 1:%{version}-%{release}
+Requires:	audacious-input-cube = %{version}-%{release}
 Requires:	audacious-input-mplayer = %{version}-%{release}
-Requires:	audacious-input-sap = %{version}-%{release}
 Requires:	audacious-visualization-iris = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
